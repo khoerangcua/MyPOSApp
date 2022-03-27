@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_chitiethoadon">
+    <Key>
+      <PropertyRef Name="idchitiethoadon" />
+    </Key>
+    <Property Name="idchitiethoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="tongcong" Type="float" />
+    <Property Name="dongia" Type="float" />
+    <Property Name="phantramgiam" Type="float" />
+    <Property Name="idhoadon" Type="int" />
+    <Property Name="idhanghoa" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_danhmuchanghoa">
+    <Key>
+      <PropertyRef Name="iddanhmuc" />
+    </Key>
+    <Property Name="iddanhmuc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendanhmuc" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="tbl_giamgia">
+    <Key>
+      <PropertyRef Name="idgiamgia" />
+    </Key>
+    <Property Name="idgiamgia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ngaybatdau" Type="date" />
+    <Property Name="ngayketthuc" Type="date" />
+    <Property Name="phantramgiam" Type="float" />
+    <Property Name="idhanghoa" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_hanghoa">
+    <Key>
+      <PropertyRef Name="idhanghoa" />
+    </Key>
+    <Property Name="idhanghoa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenhanghoa" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="dongia" Type="float" />
+    <Property Name="diachianh" Type="nvarchar" MaxLength="1000" />
+    <Property Name="iddanhmuc" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_hoadon">
+    <Key>
+      <PropertyRef Name="idhoadon" />
+    </Key>
+    <Property Name="idhoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ngaylap" Type="date" />
+    <Property Name="tongtien" Type="float" />
+    <Property Name="idkhachhang" Type="int" />
+    <Property Name="phuongthucthanhtoan" Type="tinyint" />
+    <Property Name="trangthaithanhtoan" Type="bit" />
+    <Property Name="mail" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_khachhang">
+    <Key>
+      <PropertyRef Name="idkhachhang" />
+    </Key>
+    <Property Name="idkhachhang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenkhachhang" Type="nvarchar" MaxLength="80" />
+    <Property Name="emai" Type="varchar" MaxLength="80" />
+    <Property Name="sodienthoai" Type="varchar" MaxLength="10" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="80" />
+    <Property Name="diachianh" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <Association Name="FK_tbl_chitiethoadon_tbl_hanghoa">
+    <End Role="tbl_hanghoa" Type="Self.tbl_hanghoa" Multiplicity="0..1" />
+    <End Role="tbl_chitiethoadon" Type="Self.tbl_chitiethoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_hanghoa">
+        <PropertyRef Name="idhanghoa" />
+      </Principal>
+      <Dependent Role="tbl_chitiethoadon">
+        <PropertyRef Name="idhanghoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_chitiethoadon_tbl_hoadon">
+    <End Role="tbl_hoadon" Type="Self.tbl_hoadon" Multiplicity="0..1" />
+    <End Role="tbl_chitiethoadon" Type="Self.tbl_chitiethoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_hoadon">
+        <PropertyRef Name="idhoadon" />
+      </Principal>
+      <Dependent Role="tbl_chitiethoadon">
+        <PropertyRef Name="idhoadon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_giamgia_tbl_hanghoa">
+    <End Role="tbl_hanghoa" Type="Self.tbl_hanghoa" Multiplicity="0..1" />
+    <End Role="tbl_giamgia" Type="Self.tbl_giamgia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_hanghoa">
+        <PropertyRef Name="idhanghoa" />
+      </Principal>
+      <Dependent Role="tbl_giamgia">
+        <PropertyRef Name="idhanghoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_hanghoa_tbl_danhmuchanghoa">
+    <End Role="tbl_danhmuchanghoa" Type="Self.tbl_danhmuchanghoa" Multiplicity="0..1" />
+    <End Role="tbl_hanghoa" Type="Self.tbl_hanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_danhmuchanghoa">
+        <PropertyRef Name="iddanhmuc" />
+      </Principal>
+      <Dependent Role="tbl_hanghoa">
+        <PropertyRef Name="iddanhmuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_hoadon_tbl_khachhang">
+    <End Role="tbl_khachhang" Type="Self.tbl_khachhang" Multiplicity="0..1" />
+    <End Role="tbl_hoadon" Type="Self.tbl_hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_khachhang">
+        <PropertyRef Name="idkhachhang" />
+      </Principal>
+      <Dependent Role="tbl_hoadon">
+        <PropertyRef Name="idkhachhang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="POSModelStoreContainer">
+    <EntitySet Name="tbl_chitiethoadon" EntityType="Self.tbl_chitiethoadon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_danhmuchanghoa" EntityType="Self.tbl_danhmuchanghoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_giamgia" EntityType="Self.tbl_giamgia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_hanghoa" EntityType="Self.tbl_hanghoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_hoadon" EntityType="Self.tbl_hoadon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_khachhang" EntityType="Self.tbl_khachhang" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_chitiethoadon_tbl_hanghoa" Association="Self.FK_tbl_chitiethoadon_tbl_hanghoa">
+      <End Role="tbl_hanghoa" EntitySet="tbl_hanghoa" />
+      <End Role="tbl_chitiethoadon" EntitySet="tbl_chitiethoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_chitiethoadon_tbl_hoadon" Association="Self.FK_tbl_chitiethoadon_tbl_hoadon">
+      <End Role="tbl_hoadon" EntitySet="tbl_hoadon" />
+      <End Role="tbl_chitiethoadon" EntitySet="tbl_chitiethoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_giamgia_tbl_hanghoa" Association="Self.FK_tbl_giamgia_tbl_hanghoa">
+      <End Role="tbl_hanghoa" EntitySet="tbl_hanghoa" />
+      <End Role="tbl_giamgia" EntitySet="tbl_giamgia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_hanghoa_tbl_danhmuchanghoa" Association="Self.FK_tbl_hanghoa_tbl_danhmuchanghoa">
+      <End Role="tbl_danhmuchanghoa" EntitySet="tbl_danhmuchanghoa" />
+      <End Role="tbl_hanghoa" EntitySet="tbl_hanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_hoadon_tbl_khachhang" Association="Self.FK_tbl_hoadon_tbl_khachhang">
+      <End Role="tbl_khachhang" EntitySet="tbl_khachhang" />
+      <End Role="tbl_hoadon" EntitySet="tbl_hoadon" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

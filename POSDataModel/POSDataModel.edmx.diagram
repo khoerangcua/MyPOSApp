@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1afcd8cd227e446e98fe8e420b7baacb" Name="Diagram1">
+        <EntityTypeShape EntityType="POSModel.tbl_chitiethoadon" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSModel.tbl_danhmuchanghoa" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSModel.tbl_giamgia" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSModel.tbl_hanghoa" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSModel.tbl_hoadon" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSModel.tbl_khachhang" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="POSModel.FK_tbl_chitiethoadon_tbl_hanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="POSModel.FK_tbl_chitiethoadon_tbl_hoadon" ManuallyRouted="false" />
+        <AssociationConnector Association="POSModel.FK_tbl_hanghoa_tbl_danhmuchanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="POSModel.FK_tbl_giamgia_tbl_hanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="POSModel.FK_tbl_hoadon_tbl_khachhang" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

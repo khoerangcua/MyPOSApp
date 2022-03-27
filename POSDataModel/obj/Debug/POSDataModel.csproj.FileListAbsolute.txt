@@ -1,0 +1,12 @@
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\bin\Debug\POSDataModel.exe.config
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\bin\Debug\POSDataModel.exe
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\bin\Debug\POSDataModel.pdb
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\bin\Debug\EntityFramework.dll
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\bin\Debug\EntityFramework.xml
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.csproj.AssemblyReference.cache
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.Properties.Resources.resources
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.csproj.GenerateResource.cache
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.csproj.CoreCompileInputs.cache
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.csproj.CopyComplete
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.exe
+E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSDataModel\obj\Debug\POSDataModel.pdb
