@@ -72,6 +72,7 @@ namespace POSApplication.HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(338, 112);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.theRadioButotn);

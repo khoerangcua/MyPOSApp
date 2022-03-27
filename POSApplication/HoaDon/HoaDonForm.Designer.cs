@@ -30,7 +30,6 @@ namespace POSApplication.HoaDon
         private void InitializeComponent()
         {
             this.chonkhachhangPanel = new System.Windows.Forms.Panel();
-            this.hoadonitemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tongtienlabel = new System.Windows.Forms.Label();
             this.tongtienTextBox = new System.Windows.Forms.TextBox();
             this.thanhtoanButton = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@ namespace POSApplication.HoaDon
             this.panel2 = new System.Windows.Forms.Panel();
             this.chonemailpanel = new System.Windows.Forms.Panel();
             this.phuongthucthanhtoanPanel = new System.Windows.Forms.Panel();
+            this.hoadonitemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,30 +51,21 @@ namespace POSApplication.HoaDon
             this.chonkhachhangPanel.Size = new System.Drawing.Size(338, 188);
             this.chonkhachhangPanel.TabIndex = 0;
             // 
-            // hoadonitemPanel
-            // 
-            this.hoadonitemPanel.AutoScroll = true;
-            this.hoadonitemPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hoadonitemPanel.Location = new System.Drawing.Point(0, 188);
-            this.hoadonitemPanel.Name = "hoadonitemPanel";
-            this.hoadonitemPanel.Size = new System.Drawing.Size(338, 651);
-            this.hoadonitemPanel.TabIndex = 1;
-            // 
             // tongtienlabel
             // 
             this.tongtienlabel.AutoSize = true;
-            this.tongtienlabel.Font = new System.Drawing.Font("Quicksand", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tongtienlabel.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tongtienlabel.Location = new System.Drawing.Point(12, 3);
             this.tongtienlabel.Name = "tongtienlabel";
-            this.tongtienlabel.Size = new System.Drawing.Size(131, 35);
+            this.tongtienlabel.Size = new System.Drawing.Size(109, 30);
             this.tongtienlabel.TabIndex = 4;
             this.tongtienlabel.Text = "Tổng tiền: ";
             // 
             // tongtienTextBox
             // 
-            this.tongtienTextBox.Location = new System.Drawing.Point(149, 12);
+            this.tongtienTextBox.Location = new System.Drawing.Point(114, 9);
             this.tongtienTextBox.Name = "tongtienTextBox";
-            this.tongtienTextBox.Size = new System.Drawing.Size(150, 24);
+            this.tongtienTextBox.Size = new System.Drawing.Size(64, 24);
             this.tongtienTextBox.TabIndex = 5;
             this.tongtienTextBox.TextChanged += new System.EventHandler(this.tongtienTextBox_TextChanged);
             // 
@@ -104,6 +95,7 @@ namespace POSApplication.HoaDon
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.tongtienTextBox);
             this.panel2.Controls.Add(this.tongtienlabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -128,18 +120,27 @@ namespace POSApplication.HoaDon
             this.phuongthucthanhtoanPanel.Size = new System.Drawing.Size(338, 112);
             this.phuongthucthanhtoanPanel.TabIndex = 13;
             // 
+            // hoadonitemPanel
+            // 
+            this.hoadonitemPanel.AutoScroll = true;
+            this.hoadonitemPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hoadonitemPanel.Location = new System.Drawing.Point(0, 188);
+            this.hoadonitemPanel.Name = "hoadonitemPanel";
+            this.hoadonitemPanel.Size = new System.Drawing.Size(338, 292);
+            this.hoadonitemPanel.TabIndex = 14;
+            // 
             // HoaDonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(338, 839);
+            this.Controls.Add(this.hoadonitemPanel);
             this.Controls.Add(this.phuongthucthanhtoanPanel);
             this.Controls.Add(this.chonemailpanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.hoadonitemPanel);
             this.Controls.Add(this.chonkhachhangPanel);
             this.Font = new System.Drawing.Font("Quicksand", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -156,7 +157,7 @@ namespace POSApplication.HoaDon
         #endregion
 
         private System.Windows.Forms.Panel chonkhachhangPanel;
-        private System.Windows.Forms.FlowLayoutPanel hoadonitemPanel;
+        
         private System.Windows.Forms.Label tongtienlabel;
         private System.Windows.Forms.TextBox tongtienTextBox;
         private System.Windows.Forms.Button thanhtoanButton;
@@ -164,5 +165,6 @@ namespace POSApplication.HoaDon
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel chonemailpanel;
         private System.Windows.Forms.Panel phuongthucthanhtoanPanel;
+        private System.Windows.Forms.FlowLayoutPanel hoadonitemPanel;
     }
 }

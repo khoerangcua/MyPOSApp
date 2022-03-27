@@ -87,6 +87,7 @@ namespace POSApplication
             if (this.hoadonPanel.Controls.Count > 0)
             {
                 this.hoadonPanel.Controls.RemoveAt(0);
+                hoaDonForm.thanhToanThanhCongEvent += LoadHoaDonMoi;
                 hoaDonForm.TopLevel = false;
                 hoaDonForm.AutoScroll = true;
                 this.hoadonPanel.Controls.Add(hoaDonForm);
@@ -95,6 +96,9 @@ namespace POSApplication
 
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

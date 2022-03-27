@@ -37,12 +37,13 @@ namespace POSApplication.KhachHang
             this.themkhachhangButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.themkhachhangButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.themkhachhangButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.themkhachhangButton.Font = new System.Drawing.Font("Quicksand Medium", 10.2F, System.Drawing.FontStyle.Bold);
             this.themkhachhangButton.ForeColor = System.Drawing.Color.White;
             this.themkhachhangButton.Location = new System.Drawing.Point(0, 0);
             this.themkhachhangButton.Name = "themkhachhangButton";
             this.themkhachhangButton.Size = new System.Drawing.Size(338, 188);
             this.themkhachhangButton.TabIndex = 38;
-            this.themkhachhangButton.Text = "Thêm khách hàng";
+            this.themkhachhangButton.Text = "+ Thêm khách hàng";
             this.themkhachhangButton.UseVisualStyleBackColor = false;
             this.themkhachhangButton.Click += new System.EventHandler(this.themkhachhangButton_Click);
             // 

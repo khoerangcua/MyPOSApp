@@ -11,6 +11,7 @@ namespace POSApplication.HoaDon
             this.GuiMail = false;
             this.guimailCheckBox.CheckedChanged += OnChonGuiMailListener;
             
+            
         }
         private bool guiMail;
 

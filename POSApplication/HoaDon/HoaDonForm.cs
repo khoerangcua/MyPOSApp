@@ -40,13 +40,13 @@ namespace POSApplication.HoaDon
             this.chonemailpanel.Controls.Add(luaChonMailForm);
             luaChonMailForm.Show();
 
-            this.tongtienTextBox.Text = 0 + "Đồng";
+            this.tongtienTextBox.Text = 0 + " VND";
             this.thanhtoanButton.Click += OnThanhToanListener;
         }
 
         private ChuaCoKhachHangForm chuaCoKhachHangForm;
 
-        private DaCoKhachHangForm daCoKhachHangForm;
+       
 
         private PhuongThucThanhToanForm phuongThucThanhToanForm;
 
@@ -89,7 +89,7 @@ namespace POSApplication.HoaDon
 
         public void CapNhatHoaDon()
         {
-            this.tongtienTextBox.Text = this.HoaDon.Tongtien.ToString() + "Đồng";
+            this.tongtienTextBox.Text = this.HoaDon.Tongtien.ToString() + " VND";
         }
 
         public void CapNhatChiTietHoaDon()
