@@ -62,6 +62,9 @@ namespace POSApplication.SanPham
             this.soluongTextBox.Text = soLuong.ToString();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

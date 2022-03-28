@@ -53,13 +53,14 @@ namespace POSApplication.SanPham
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 359);
+            this.panel1.Size = new System.Drawing.Size(252, 377);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tenspLabel
             // 
             this.tenspLabel.AutoSize = true;
-            this.tenspLabel.Location = new System.Drawing.Point(98, 200);
+            this.tenspLabel.Location = new System.Drawing.Point(85, 222);
             this.tenspLabel.Name = "tenspLabel";
             this.tenspLabel.Size = new System.Drawing.Size(69, 30);
             this.tenspLabel.TabIndex = 13;
@@ -69,7 +70,7 @@ namespace POSApplication.SanPham
             // giasLabel
             // 
             this.giasLabel.AutoSize = true;
-            this.giasLabel.Location = new System.Drawing.Point(116, 266);
+            this.giasLabel.Location = new System.Drawing.Point(103, 288);
             this.giasLabel.Name = "giasLabel";
             this.giasLabel.Size = new System.Drawing.Size(35, 30);
             this.giasLabel.TabIndex = 12;
@@ -79,16 +80,17 @@ namespace POSApplication.SanPham
             // soluongTextBox
             // 
             this.soluongTextBox.Font = new System.Drawing.Font("Quicksand", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soluongTextBox.Location = new System.Drawing.Point(88, 239);
+            this.soluongTextBox.Location = new System.Drawing.Point(75, 261);
             this.soluongTextBox.Name = "soluongTextBox";
             this.soluongTextBox.Size = new System.Drawing.Size(88, 24);
             this.soluongTextBox.TabIndex = 11;
+            this.soluongTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // congBtn
             // 
             this.congBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.congBtn.Font = new System.Drawing.Font("Quicksand", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.congBtn.Location = new System.Drawing.Point(182, 235);
+            this.congBtn.Location = new System.Drawing.Point(169, 257);
             this.congBtn.Name = "congBtn";
             this.congBtn.Size = new System.Drawing.Size(43, 32);
             this.congBtn.TabIndex = 10;
@@ -100,7 +102,7 @@ namespace POSApplication.SanPham
             // 
             this.truBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlText;
             this.truBtn.Font = new System.Drawing.Font("Quicksand", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truBtn.Location = new System.Drawing.Point(46, 237);
+            this.truBtn.Location = new System.Drawing.Point(33, 259);
             this.truBtn.Name = "truBtn";
             this.truBtn.Size = new System.Drawing.Size(38, 29);
             this.truBtn.TabIndex = 9;
@@ -116,7 +118,7 @@ namespace POSApplication.SanPham
             this.themBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.themBtn.Font = new System.Drawing.Font("Quicksand Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.themBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.themBtn.Location = new System.Drawing.Point(79, 314);
+            this.themBtn.Location = new System.Drawing.Point(75, 332);
             this.themBtn.Margin = new System.Windows.Forms.Padding(2);
             this.themBtn.Name = "themBtn";
             this.themBtn.Size = new System.Drawing.Size(97, 34);
@@ -129,10 +131,10 @@ namespace POSApplication.SanPham
             this.spPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.spPictureBox.BackColor = System.Drawing.Color.BlueViolet;
-            this.spPictureBox.Location = new System.Drawing.Point(22, 17);
+            this.spPictureBox.Location = new System.Drawing.Point(11, 11);
             this.spPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.spPictureBox.Name = "spPictureBox";
-            this.spPictureBox.Size = new System.Drawing.Size(209, 174);
+            this.spPictureBox.Size = new System.Drawing.Size(230, 197);
             this.spPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spPictureBox.TabIndex = 7;
             this.spPictureBox.TabStop = false;
@@ -141,7 +143,7 @@ namespace POSApplication.SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 359);
+            this.ClientSize = new System.Drawing.Size(252, 377);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

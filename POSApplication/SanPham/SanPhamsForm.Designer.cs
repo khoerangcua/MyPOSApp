@@ -35,17 +35,18 @@ namespace POSApplication.SanPham
             // sanphamsPanel
             // 
             this.sanphamsPanel.AutoScroll = true;
-            this.sanphamsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sanphamsPanel.Location = new System.Drawing.Point(0, 0);
+            this.sanphamsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.sanphamsPanel.Location = new System.Drawing.Point(0, -1);
             this.sanphamsPanel.Name = "sanphamsPanel";
-            this.sanphamsPanel.Size = new System.Drawing.Size(1006, 1033);
+            this.sanphamsPanel.Size = new System.Drawing.Size(1250, 1040);
             this.sanphamsPanel.TabIndex = 0;
             // 
             // SanPhamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 1033);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1230, 1039);
             this.Controls.Add(this.sanphamsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SanPhamsForm";
