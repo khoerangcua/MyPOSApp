@@ -11,3 +11,13 @@ E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSService\obj\Debug\POSService.csproj.
 E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSService\obj\Debug\POSService.csproj.CopyComplete
 E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSService\obj\Debug\POSService.dll
 E:\HocTap\2022-HKD\SOA\MyProject\App\POS\POSService\obj\Debug\POSService.pdb
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\obj\Debug\POSService.csproj.CoreCompileInputs.cache
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\obj\Debug\POSService.dll
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\obj\Debug\POSService.pdb
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\bin\POSService.dll.config
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\bin\POSService.dll
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\bin\POSService.pdb
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\bin\EntityFramework.dll
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\bin\EntityFramework.xml
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\obj\Debug\POSService.csproj.CopyComplete
+E:\HocTap\2022-HKD\SOA\MyProject\CoppyApp\POS\POSService\obj\Debug\POSService.csproj.AssemblyReference.cache

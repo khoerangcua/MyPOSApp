@@ -47,6 +47,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Experience_Layer.svc" />
+    <Content Include="POSDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSDataModel.edmx</DependentUpon>
+      <LastGenOutput>POSDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="POSDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSDataModel.edmx</DependentUpon>
+      <LastGenOutput>POSDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Service1.svc" />
     <Content Include="System_Layer.svc" />
     <Content Include="Task_Layer.svc" />
@@ -79,6 +90,21 @@
     <Compile Include="IExperience_Layer.cs" />
     <Compile Include="ISystem_Layer.cs" />
     <Compile Include="ITask_Layer.cs" />
+    <Compile Include="POSDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -90,12 +116,37 @@
     <Compile Include="Task_Layer.svc.cs">
       <DependentUpon>Task_Layer.svc</DependentUpon>
     </Compile>
+    <Compile Include="tbl_chitiethoadon.cs">
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_danhmuchanghoa.cs">
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_giamgia.cs">
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_hanghoa.cs">
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_hoadon.cs">
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_khachhang.cs">
+      <DependentUpon>POSDataModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <EntityDeploy Include="POSDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>POSDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="POSDataModel.edmx.diagram">
+      <DependentUpon>POSDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,10 +155,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\POSDataModel\POSDataModel.csproj">
-      <Project>{c5b4f902-73dc-4156-824b-5d6d54a9768b}</Project>
-      <Name>POSDataModel</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
